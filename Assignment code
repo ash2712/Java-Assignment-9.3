@@ -1,0 +1,29 @@
+package myPack;
+import java.util.*;
+
+public class genericHashmapClass {
+	
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter Employee ID");
+		int Empcode = sc.nextInt();//asks user for ID
+		
+		Map<Integer, String> map = new HashMap<Integer, String>();
+		map.put(1, "Ayush");//objects in Hash Map: map
+		map.put(2, "Aarav" );
+		map.put(3, "Shiv");
+		map.put(4, "Zahaan");
+		
+		Iterator keyIterator = map.keySet().iterator();
+		if(map.containsKey(Empcode)) {
+		    Object key = Empcode;//If the Empcode is present in the map, then its value, i.e. the Empname is printed
+		    String Empname = map.get(key);
+		    System.out.println("Employee name for employee ID " + Empcode + " is " + Empname);
+		}
+		else{
+			System.out.println("Invalid Employee id");//if ID isn't present in the map
+		}
+        }
+	
+	
+}
